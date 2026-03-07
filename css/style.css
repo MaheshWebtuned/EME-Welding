@@ -1817,12 +1817,33 @@ a.logo {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.servive-card-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../img/welding-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: invert(0.4);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .servive-card-header h2 {
   text-transform: uppercase;
   color: var(--white);
+  z-index: 5;
 }
+
+.servive-card-header a {
+  z-index: 5;
+}
+
 
 .servive-card {
   padding: 20px;
@@ -1963,7 +1984,7 @@ a.logo {
 
 .mansory-gallery .column {
   flex: 25%;
-  padding: 5px;
+  padding: 5px 10px;
 }
 
 .mansory-gallery .column img {
@@ -2326,7 +2347,7 @@ a.logo {
 }
 
 .button-1:hover {
-  background: var(--secondary-blue);
+  background: #0e2a7c;
   color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 4px 6px rgba(220, 219, 225, 0.2);
@@ -2386,8 +2407,8 @@ a.logo {
 ======================================= */
 
 .footer {
-  position: relative;
   background: #0b2165;
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -2395,13 +2416,16 @@ a.logo {
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url(../img/lines.png);
+  background-image: url(../img/line-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   filter: invert(0.4);
-  opacity: 0.2;
+  opacity: 0.05;
   pointer-events: none;
+  z-index: 0;
 }
+
+
 
 
 /* footer top */
