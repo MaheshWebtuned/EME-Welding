@@ -2044,7 +2044,6 @@ a.logo {
   height: var(--slideHeight);
   background-color: transparent;
   margin: auto;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .slider .slides-track {
@@ -2743,4 +2742,57 @@ a.logo {
 
 /*========================
  Header SECTION
+ ====================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========================
+      RESPONSVE SECTION
+ ====================== */
+
+
+@media (max-width:992px) {
+  .intro-section{
+    padding-bottom: 20px;
+  }
+}
+
+
+
+@media (max-width:767px) {}
+
+
+
+@media (max-width:575px) {}
+
+
+/*========================
+      RESPONSVE SECTION
  ====================== */
