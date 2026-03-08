@@ -292,6 +292,7 @@
                         <p><i class="bi bi-telephone"></i> 0407400374</p>
                         <p><i class="bi bi-envelope-at"></i> nick@emewelding.com</p>
                         <p><i class="bi bi-geo-alt"></i> Botany NSW</p>
+                        <p><i class="bi bi-clock"></i> Mon - Fri : 7:00 AM - 3:30 PM</p>
                     </div>
 
                 </div>
@@ -346,41 +347,51 @@
                     </form>
                 </div>
 
+
+
+
+
+
+
             </div>
         </div>
     </section>
 
 
-
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
 
-            // Initialize EmailJS (v4 format)
-            emailjs.init({
-                publicKey: "MGYEgOwy8VSjCkIyX"
-            });
-
             const form = document.getElementById("contact-form");
+
+            // Initialize EmailJS  / Public key
+            emailjs.init("0k53Xe39WbnEysH-z");
 
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
-                emailjs.sendForm("service_mwsi3nd", "template_hwqeq1g", this)
-                    .then(function (response) {
-                        console.log("SUCCESS!", response.status, response.text);
+                emailjs.sendForm(
+                    // Service ID
+                    "service_6lsi759",
+                    // Templade ID
+                    "template_vsidhon",
+                    "#contact-form"
+                )
+                    .then(function () {
+
                         alert("Message sent successfully!");
                         form.reset();
-                    })
-                    .catch(function (error) {
-                        console.log("FAILED...", error);
-                        alert("Error: " + JSON.stringify(error));
+
+                    }, function (error) {
+
+                        console.error("EmailJS Error:", error);
+                        alert("Failed to send message. Please try again.");
+
                     });
+
             });
 
         });
     </script>
-
 
     <!--============================
             CONTACT SECTION 2 
@@ -625,10 +636,8 @@
 
 
 
-
-
-
-
+    <!-- SCRIPT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- Bootstrap JavaScript (responsive UI components) -->
     <script src="js/bootstrap.min.js"></script>
