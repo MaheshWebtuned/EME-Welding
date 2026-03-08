@@ -23,7 +23,7 @@
 /* BreadCrumb Section */
 .breadcrumb-box {
     position: relative;
-    background: url('../img/bg.jpg') center center / cover no-repeat;
+    background: url('../img/weld-1.webp') center center / cover no-repeat;
     width: 100%;
     padding: clamp(4rem, 10vw, 8rem) 1rem;
 
