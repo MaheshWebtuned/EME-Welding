@@ -552,7 +552,7 @@ b {
   font-weight: 600;
 }
 
-.navbar .navbar-nav .active i{
+.navbar .navbar-nav .active i {
   color: var(--secondary-blue);
 }
 
@@ -1370,6 +1370,10 @@ a.logo {
   align-items: center;
 }
 
+.intro-txt h2 {
+  text-transform: capitalize;
+}
+
 .intro-txt p {
   font-size: 16px;
   color: var(--text-gray);
@@ -1843,7 +1847,7 @@ a.logo {
 }
 
 .cta-content h2 span {
-  color: var(--primary-blue);
+  color: var(--secondary-blue);
   text-transform: capitalize;
 }
 
