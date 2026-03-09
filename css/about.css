@@ -86,9 +86,6 @@
 
 
 
-
-
-
 @media (max-width:945px) {
     .breadcrumb-content {
         max-width: 900px;
@@ -109,11 +106,123 @@
 
 
 
+
+
+
+
+
+
+
+
+
+/* ==============================
+   About Service Section
+============================== */
+
+.about-service-section .container {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 80px;
+    border-radius: 12px;
+}
+
+/* Background image overlay */
+
+.about-service-section .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+        url("../img/on-site.jpeg") center/cover no-repeat;
+    z-index: 0;
+}
+
+/* Keep content above background */
+
+.about-service-section .row {
+    position: relative;
+    z-index: 1;
+}
+
+/* Left side */
+
+.about-service-list-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Service cards */
+
+.about-service-list {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    padding: 15px 10px;
+
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.06);
+
+    transition: transform .25s ease;
+}
+
+.about-service-list:hover {
+    transform: translateY(-6px);
+}
+
+/* Icons */
+
+.service-list-icon img {
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+    margin-bottom: 6px;
+}
+
+/* Title */
+
+.about-service-list h4 {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+
+/* About Service Section */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FAQ SECTION */
 
 .faq-section {
     max-width: 1100px;
-    margin: auto;
+    margin: 0px auto;
+    padding-top: 0px;
 }
 
 .faq-item {
@@ -162,3 +271,96 @@
 }
 
 /* FAQ SECTION */
+
+
+
+
+
+
+
+
+
+/* ======= CTA SECTION ======= */
+
+
+.cta-box {
+    position: relative;
+    overflow: hidden;
+    padding: 40px 80px;
+    height: 450px;
+}
+
+.cta-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 650px;
+}
+
+.cta-content h2 {
+    font-size: clamp(35px, 7vw, 60px);
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.cta-content h2 span {
+    color: var(--secondary-blue);
+    text-transform: capitalize;
+}
+
+@media (max-width:992px) {
+    .cta-section {
+        padding: 0px 60px;
+    }
+
+    .cta-box {
+        padding: 40px 60px;
+    }
+
+}
+
+@media (max-width:767px) {
+    .cta-section {
+        padding: 0px 30px;
+    }
+
+    .cta-box {
+        padding: 40px 30px;
+    }
+
+}
+
+@media (max-width:557px) {
+    .cta-section {
+        padding: 0px 12px;
+    }
+
+    .cta-box {
+        padding: 40px 12px;
+    }
+
+    .gallery-btn a {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ======= Lets Talk CTA SECTION ======= */

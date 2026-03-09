@@ -269,11 +269,12 @@
 .service-intro-img {
     border-radius: 10px;
     max-width: 1000px;
-
 }
 
 .service-intro-img img {
     border-radius: 10px;
+    width: 100%;
+    height: auto;
     aspect-ratio: 16/7;
     object-fit: cover;
     object-position: center;
