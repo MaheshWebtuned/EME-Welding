@@ -582,7 +582,6 @@ b {
 .nav-scroll .container {
   margin: 0px auto;
   background: var(--white);
-
 }
 
 
@@ -1497,42 +1496,14 @@ a.logo {
 
 /* ======= FEATURES SECTION STYLE======= */
 
+.our-service-section {
+  padding-top: 0px;
+}
 
 .our-service-section .row>div {
   display: flex;
 }
 
-.servive-card-header {
-  background-color: #006eff24;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.servive-card-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(../img/welding-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: invert(0.4);
-  opacity: 0.2;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.servive-card-header h2 {
-  text-transform: uppercase;
-  color: var(--white);
-  z-index: 5;
-}
-
-.servive-card-header a {
-  z-index: 5;
-}
 
 
 .servive-card {
@@ -1663,6 +1634,10 @@ a.logo {
 
 
 /* ======= GALLERY SECTION ======= */
+
+.hero-gallery-section {
+  padding-bottom: 0px;
+}
 
 
 .mansory-gallery {
@@ -1940,6 +1915,17 @@ a.logo {
   height: 100%;
 }
 
+.card-profile {
+  display: flex;
+}
+
+.google-icon img {
+  aspect-ratio: 1/1;
+  width: 80px;
+  height: auto;
+}
+
+
 .testimonial-card:hover {
   transform: translateY(-5px);
 }
@@ -1947,6 +1933,7 @@ a.logo {
 .testimonial-card .card-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
@@ -2130,7 +2117,7 @@ a.logo {
 .footer .top .item h3 {
   color: var(--white);
   font-family: "Libre Baskerville", serif;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;

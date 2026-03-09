@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>EME Welding | Reliable Welding & Fabrication Solutions in Sydney</title>
 
 
@@ -15,9 +15,17 @@
     <!-- Google ("Poppins", sans-serif) ("Libre Baskerville", serif;) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Load only the weights/styles you actually use -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+
+
+
+
+
 
 
 
@@ -46,24 +54,24 @@
     <link rel="stylesheet" href="css/review.css" />
 
 
-
 </head>
 
 
 
 <body>
 
+    <main>
 
 
-    <!-- Preloader -->
-    <div class="preloader-bg"></div>
-    <div id="preloader">
-        <div id="preloader-status">
-            <div class="loader">
-                <span></span>
+        <!-- Preloader -->
+        <div class="preloader-bg"></div>
+        <div id="preloader">
+            <div id="preloader-status">
+                <div class="loader">
+                    <span></span>
+                </div>
             </div>
         </div>
-    </div>
 
 
 
@@ -71,39 +79,42 @@
 
 
 
-    <!--============================
+        <!--============================
             NAV BANNER 
-  ==============================-->
+        ==============================-->
 
-    <div class="nav-banner py-2 px-3">
-        <div class="container">
-            <div class="row ">
+        <div class="nav-banner py-2 px-3">
+            <div class="container">
+                <div class="row ">
 
-                <div class="col-md-6 col-lg-3 nav-banner-item">
-                    <a href="tel:0407400374"> <i class="bi bi-telephone"></i> 0407400374 </a>
-                </div>
+                    <div class="col-md-6 col-lg-3 nav-banner-item">
+                        <a href="tel:0407400374"> <i class="bi bi-telephone"></i> 0407400374 </a>
+                    </div>
 
-                <div class="col-md-6 col-lg-3 nav-banner-item">
-                    <a href="mailto:nick@emewelding.com"> <i class="bi bi-envelope-at"></i> nick@emewelding.com </a>
-                </div>
+                    <div class="col-md-6 col-lg-3 nav-banner-item">
+                        <a href="mailto:nick@emewelding.com"> <i class="bi bi-envelope-at"></i> nick@emewelding.com </a>
+                    </div>
 
-                <div class="col-lg-3 nav-banner-item d-none d-lg-block">
-                    <div><i class="bi bi-clock"></i> Mon - Fri : 7:00 AM - 3:30 PM</div>
-                </div>
+                    <div class="col-lg-3 nav-banner-item d-none d-lg-block">
+                        <div><i class="bi bi-clock"></i> Mon - Fri : 7:00 AM - 3:30 PM</div>
+                    </div>
 
-                <div class="col-lg-3 nav-banner-social d-none d-lg-block">
-                    <div class="nav-banner-item">
-                        <a href="https://www.facebook.com/emewelding/"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/emewelding/"><i class="bi bi-instagram"></i></a>
+                    <div class="col-lg-3 nav-banner-social d-none d-lg-block">
+                        <div class="nav-banner-item">
+                            <a href="https://www.facebook.com/emewelding/" aria-label="Visit our Facebook page">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/emewelding/" aria-label="Visit our instagram page"><i
+                                    class="bi bi-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!--============================
+        <!--============================
             NAV BANNER 
-  ==============================-->
+        ==============================-->
 
 
 
@@ -117,112 +128,123 @@
 
 
 
-    <!--============================
+        <!--============================
             NAVIGATION BAR 
-  ==============================-->
+        ==============================-->
 
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
 
 
-            <!-- Logo -->
-            <div class="logo-wrapper">
-                <a class="logo" href="index.html">
-                    <img src="img/logo/logo.png" class="logo-img img-fluid" alt="EME Welding Logo" />
-                </a>
+                <!-- Logo -->
+                <div class="logo-wrapper">
+                    <a class="logo" href="index.html">
+                        <img src="img/logo/logo.png" class="logo-img img-fluid" alt="EME Welding Logo" />
+                    </a>
+                </div>
+
+                <!-- Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+                </button>
+
+
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></a>
+
+                            <ul class="dropdown-menu">
+
+                                <li>
+                                    <a href="welding-service.html" class="dropdown-item"><span>Welding Service (MIG,
+                                            TIG, ARC)</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="metal-fabrication.html" class="dropdown-item"><span>Metal
+                                            Fabrication</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="structural-steeel-installation.html" class="dropdown-item"><span>Structural
+                                            Steel
+                                            Installation</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="pipe-instrument-fitting.html" class="dropdown-item"><span>Pipe &amp;
+                                            Instrument
+                                            Fitting</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="project-management.html" class="dropdown-item"><span>Project
+                                            Managament</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="on-site-welding.html" class="dropdown-item"><span>On-Site
+                                            Welding</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="custom-fabrication.html" class="dropdown-item"><span>Custom
+                                            Fabrication</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="electrofusion-welding.html" class="dropdown-item"><span>Electrofusion
+                                            Welding</span></a>
+                                </li>
+
+                                <li>
+                                    <a href="shaft-laser-alignment.html" class="dropdown-item"><span>Shaft Laser
+                                            Alignment</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="project.html">Projects</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="review.html">Reviews</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+
+                        <li class="nav-item d-none d-lg-block">
+                            <a href="contact.html" class="button-2 "> Get a free quote </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+
             </div>
+        </nav>
 
-            <!-- Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-            </button>
-
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Services <i class="fa-solid fa-angle-down"></i></a>
-
-                        <ul class="dropdown-menu">
-
-                            <li>
-                                <a href="welding-service.html" class="dropdown-item"><span>Welding Service (MIG,
-                                        TIG, ARC)</span></a>
-                            </li>
-
-                            <li>
-                                <a href="metal-fabrication.html" class="dropdown-item"><span>Metal
-                                        Fabrication</span></a>
-                            </li>
-
-                            <li>
-                                <a href="structural-steeel-installation.html" class="dropdown-item"><span>Structural
-                                        Steel
-                                        Installation</span></a>
-                            </li>
-
-                            <li>
-                                <a href="pipe-instrument-fitting.html" class="dropdown-item"><span>Pipe &amp; Instrument
-                                        Fitting</span></a>
-                            </li>
-
-                            <li>
-                                <a href="project-management.html" class="dropdown-item"><span>Project
-                                        Managament</span></a>
-                            </li>
-
-                            <li>
-                                <a href="on-site-welding.html" class="dropdown-item"><span>On-Site Welding</span></a>
-                            </li>
-
-                            <li>
-                                <a href="custom-fabrication.html" class="dropdown-item"><span>Custom
-                                        Fabrication</span></a>
-                            </li>
-
-
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="project.html">Projects</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="review.html">Reviews</a>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-
-                    <li class="nav-item d-none d-lg-block">
-                        <a href="contact.html" class="button-2 "> Get a free quote </a>
-                    </li>
-
-
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-
-    <!--============================
+        <!--============================
             NAVIGATION BAR 
-  ==============================-->
+        ==============================-->
 
 
 
@@ -246,20 +268,20 @@
 
         <!--============================
             BREADCRUMB SECTION 
-  ==============================-->
+        ==============================-->
 
 
-    <section class="breadcrumb-box">
-        <div class="breadcrumb-content ">
-            <h1 class="animate-bottom">Review</h1>
-            <p class="animate-bottom"><a href="index.html">home </a> / <span>review</span></p>
-        </div>
-    </section>
+        <section class="breadcrumb-box">
+            <div class="breadcrumb-content ">
+                <h1 class="animate-bottom">Review</h1>
+                <p class="animate-bottom"><a href="index.html">home </a> / <span>review</span></p>
+            </div>
+        </section>
 
 
-    <!--============================
+        <!--============================
             BREADCRUMB SECTION 
-  ==============================-->
+        ==============================-->
 
 
 
@@ -298,165 +320,536 @@
 
 
 
-    <!--============================
-    Testimonials Section
-=============================-->
+        <!--============================
+        Testimonials Section
+        =============================-->
 
-    <section class="testimonials-section section-padding">
+        <section class="testimonials-section section-padding">
 
-        <div class="container">
-            <!-- Section Title -->
+            <div class="container">
+                <!-- Section Title -->
 
-            <div class="sec-title text-center animate-bloom pb-4">
-                <h2>what our <span>happy clients says</span></h2>
+                <div class="sec-title text-center animate-bloom pb-4">
+                    <h2>what our <span>clients says</span></h2>
+
+                </div>
+
+
+
+                <!-- Testimonials Grid -->
+                <div class="row g-4">
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>James R. </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+                            <p>
+                                “EME did an excellent job on my fabrication project. The work was precise,
+                                delivered on time, and the communication made the whole process easy. Highly recommend
+                                them.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Sarah M. </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “I had some custom welding done and was impressed by the attention to detail. The finish
+                                was
+                                clean and professional, exactly what I needed. Great value and workmanship.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Deniel </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “Eme Welding provided a quick turnaround without cutting corners. The staff were
+                                friendly,
+                                knowledgeable, and clearly take pride in their craft. I’ll be back for future projects.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Rebeccat </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “From the first call to delivery, everything was smooth and professional. The team
+                                explained
+                                the process clearly and the results exceeded my expectations. Very reliable service.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Micheal L </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “I needed urgent repairs and they handled it perfectly. The work was solid, durable, and
+                                completed faster than I expected. Great customer service and skilled tradespeople.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Olivia p </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “Professional, efficient, and high-quality work. The team at Eme Welding made sure every
+                                detail was right, and the finished product looks fantastic. Couldn’t be happier.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>John Will </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “We had a complex fabrication project that required precision and reliability. Nick and
+                                his
+                                team at EME Welding took the time to understand our needs, explained the process
+                                clearly,
+                                and delivered results that exceeded expectations. The workmanship was flawless, and the
+                                project was completed ahead of schedule. It’s rare to find a company that combines
+                                technical
+                                expertise with such professionalism.”
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Sam </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “Our business faced an urgent repair situation, and EME Welding came through when we
+                                needed
+                                them most. The crew arrived promptly, worked efficiently, and maintained a friendly,
+                                approachable attitude throughout. The quality of the welding was excellent, and they
+                                left
+                                the site clean and organized. Their responsiveness and reliability really stood out.”
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Emily Kenley </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “Nick impressed us with his clear communication and transparency. He kept us updated at
+                                every stage of the project, and the final outcome was better than we imagined. The
+                                attention
+                                to detail and commitment to quality made us feel confident throughout. It’s refreshing
+                                to
+                                work with a company that values trust and customer satisfaction as much as technical
+                                skill.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Michael Tomy</h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “We hired EME Welding for shaft laser alignment, and the difference was immediate. Our
+                                machinery had been struggling with vibration and wear, but after their precise alignment
+                                work, everything ran smoother and more efficiently. The team explained the process in
+                                simple
+                                terms, so we understood exactly what was being done. It saved us from costly breakdowns
+                                and
+                                extended the life of our equipment.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Richel P </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “What I appreciated most was the honesty. The team gave us straightforward advice,
+                                explained
+                                the options, and stuck to the agreed budget. No hidden costs, no surprises. The
+                                workmanship
+                                was excellent, and they treated our project with care. I’ll definitely use them again
+                                for
+                                future welding needs.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Chris W</h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “EME Welding treated our project like it mattered, not just another job. The attention
+                                to
+                                detail was outstanding, and the team showed genuine care for the outcome. They combined
+                                technical precision with a human touch, which made the whole experience stress-free. I
+                                wouldn’t hesitate to recommend them to anyone looking for reliable welding services.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Anna J</h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “From the first phone call to the final handover, EME Welding demonstrated
+                                professionalism
+                                and genuine care. They listened to our concerns, provided clear explanations, and
+                                delivered
+                                results that gave us confidence. It felt like they were invested in our success, not
+                                just
+                                completing a task. That personal commitment makes all the difference.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Peter H </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “We approached EME Welding with a custom fabrication project that required both
+                                creativity
+                                and technical precision. Nick and his team listened carefully to our ideas, offered
+                                practical suggestions, and executed the work flawlessly. The final product was not only
+                                functional but beautifully finished. Their professionalism and willingness to go the
+                                extra
+                                mile made the whole experience stress-free.”
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card -->
+                    <div class="col-12 col-md-6 col-lg-4 animate-fade">
+                        <div class="testimonial-card">
+
+                            <div class="card-header">
+                                <div class="card-profile">
+                                    <img src="img/icons/user.webp" alt="user icon">
+                                    <div>
+                                        <h5>Laura J </h5>
+                                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                                    </div>
+                                </div>
+
+                                <div class="google-icon">
+                                    <img src="img/logo/Google-logo.webp" alt="google logo">
+                                </div>
+                            </div>
+
+
+                            <p>
+                                “EME Welding handled our mechanical maintenance with impressive efficiency. The team
+                                arrived
+                                on time, explained the process clearly, and carried out the work with minimal disruption
+                                to
+                                our operations. The results were excellent, and our equipment has been running smoothly
+                                ever
+                                since.”
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
 
             </div>
+        </section>
+
+        <!--============================
+        Testimonials Section
+        =============================-->
 
 
 
-            <!-- Testimonials Grid -->
-            <div class="row g-4">
-
-
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>James R. </h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <p>
-                            “EME did an excellent job on my fabrication project. The work was precise,
-                            delivered on time, and the communication made the whole process easy. Highly recommend
-                            them.”
-                        </p>
-                    </div>
-                </div>
 
 
 
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>Sarah M. </h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <p>
-                            “I had some custom welding done and was impressed by the attention to detail. The finish was
-                            clean and professional, exactly what I needed. Great value and workmanship.”
-                        </p>
-                    </div>
-                </div>
 
 
 
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>Daniel </h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <p>
-                            “Eme Welding provided a quick turnaround without cutting corners. The staff were friendly,
-                            knowledgeable, and clearly take pride in their craft. I’ll be back for future projects.”
-                        </p>
-                    </div>
-                </div>
 
 
 
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>Rebeccat</h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <p>
-                            “From the first call to delivery, everything was smooth and professional. The team explained
-                            the process clearly and the results exceeded my expectations. Very reliable service.” </p>
-                    </div>
-                </div>
 
 
+        <!-- =====================================
+             CTA SECTION
+        ========================================== -->
 
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>Michael L.</h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
+        <div class="cta-box ">
+            <div class="container cta-content section-padding">
+                <h2 class="animate-bloom">Get in <span>Touch</span> </h2>
 
-                        <p>
-                            “I needed urgent repairs and they handled it perfectly. The work was solid, durable, and
-                            completed faster than I expected. Great customer service and skilled tradespeople.”
-                        </p>
-                    </div>
-                </div>
+                <div class="col-12 gallery-btn text-left pt-4 animate-bottom">
 
+                    <a href="contact.html" class="button-1 me-4">
+                        Get A Free Quote
+                    </a>
 
-
-                <!-- Card -->
-                <div class="col-12 col-md-6 col-lg-4 animate-fade">
-                    <div class="testimonial-card">
-                        <div class="card-header">
-                            <img src="img/icons/user.png" alt="user icon">
-                            <div>
-                                <h5>Olivia P. </h5>
-                                <div class="stars">★★★★★</div>
-                            </div>
-                        </div>
-
-                        <p>
-                            “Professional, efficient, and high-quality work. The team at Eme Welding made sure every
-                            detail was right, and the finished product looks fantastic. Couldn’t be happier.”
-                        </p>
-                    </div>
+                    <a href="tel:0407400374" class=" button-2"> 0407400374</a>
                 </div>
 
 
             </div>
-
-
         </div>
-    </section>
 
-    <!--============================
-    Testimonials Section
-=============================-->
-
+        <!-- =======================================
+            CTA SECTION
+         ========================================== -->
 
 
 
 
 
 
-
-
-
-
+    </main>
 
 
 
@@ -543,8 +936,10 @@
                             &copy;2026. EME Welding. All Rights Reserved.
                         </p>
 
-                        <div class="footer-power"><a href="https://murphystechnology.com.au/"> <img
-                                    src="img/logo/power.png" alt=""></a></div>
+                        <div class="footer-power"><a href="https://murphystechnology.com.au/"> <img loading="lazy"
+                                    src="img/logo/power.png" alt="Website developed by Murphys Technology"></a></div>
+
+
                     </div>
                 </div>
             </div>
@@ -640,16 +1035,16 @@
 
 
     <!-- Bootstrap JavaScript (responsive UI components) -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js" defer></script>
 
     <!-- jQuery core library (v3.7.1) -->
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js" defer></script>
 
     <!-- ScrollIt (smooth scrolling between page sections) -->
-    <script src="js/scrollIt.min.js"></script>
+    <script src="js/scrollIt.min.js" defer></script>
 
     <!-- Custom JavaScript (your site-specific scripts) -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 
 
 </body>
