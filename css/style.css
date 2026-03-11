@@ -395,7 +395,10 @@ b {
 
 
 
-/* ======= Nav-banner style ======= */
+/* ===============================
+       Nav-banner style 
+============================== */
+
 .nav-banner {
   color: var(--text-gray);
   background-color: var(--white);
@@ -435,7 +438,9 @@ b {
   margin-right: 30px;
 }
 
-/* ======= Nav-banner style ======= */
+/* =======================
+    Nav-banner style 
+ ======================= */
 
 
 
@@ -1103,6 +1108,7 @@ a.logo {
   height: 95vh;
   overflow: hidden;
 }
+
 
 .carousel-container {
   position: relative;

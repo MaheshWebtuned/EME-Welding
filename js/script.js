@@ -309,7 +309,7 @@ class HeroCarousel {
     }
 
 
-    
+
     goToSlide(index) {
         if (this.isTransitioning || index === this.currentIndex) return;
 
@@ -381,6 +381,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Scroll Animation Script
+
+(function () {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            const groups = {}; // Group by animation type
+
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const animationType = Array.from(el.classList).find((cls) =>
+                        cls.startsWith("animate-")   // updated prefix
+                    );
+
+                    if (!groups[animationType]) groups[animationType] = [];
+                    groups[animationType].push(el);
+
+                    observer.unobserve(el); // Animate only once
+                }
+            });
+
+            // Apply stagger per animation group
+            Object.values(groups).forEach((group) => {
+                group.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add("animate-visible"); // updated suffix
+                    }, index * 300); // Delay between elements
+                });
+            });
+        },
+        { threshold: 0.2 }
+    );
+
+    // Observe all animate elements
+    document.querySelectorAll('[class*="animate-"]').forEach((el) => {
+        observer.observe(el);
+    });
+})();
 
 
 
