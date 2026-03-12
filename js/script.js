@@ -4,265 +4,153 @@
 
 ----------------------------------------------------------- */
 
-$(function () {
-    "use strict";
-    var wind = $(window);
-    // ScrollIt
-    $.scrollIt({
-        upKey: 38, // key code to navigate to the next section
-        downKey: 40, // key code to navigate to the previous section
-        easing: 'swing', // the easing function for animation
-        scrollTime: 600, // how long (in ms) the animation takes
-        activeClass: 'active', // class given to the active nav element
-        onPageChange: null, // function(pageIndex) that is called when page is changed
-        topOffset: -70 // offste (in px) for fixed top navigation
-    });
+(function () {
+    'use strict';
 
+    var navbar = document.getElementById('nbNavbar');
+    var banner = document.getElementById('nbBanner');
+    var hamburger = document.getElementById('nbHamburger');
+    var sidebar = document.getElementById('nbSidebar');
+    var backdrop = document.getElementById('nbBackdrop');
+    var closeBtn = document.getElementById('nbClose');
+    var sToggle = document.getElementById('nbServicesToggle');
+    var sMenu = document.getElementById('nbServicesMenu');
 
-
-
-
-
-    // Preloader (make sure jQuery is loaded before this)
-    $(window).on("load", function () {
-        $("#preloader").fadeOut(600);
-        $(".preloader-bg").delay(600).fadeOut(600);
-    });
-
-
-
-
-
-    // Navbar scrolling background
-    wind.on("scroll", function () {
-        var bodyScroll = wind.scrollTop(),
-            navbar = $(".navbar"),
-            logo = $(".navbar .logo> img");
-        if (bodyScroll > 100) {
-            navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo/logo.webp');
+    /* ── Scroll: shrink navbar + hide banner ── */
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 60) {
+            navbar && navbar.classList.add('nb-scrolled');
+            banner && banner.classList.add('nb-hidden');
         } else {
-            navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo/logo.webp');
+            navbar && navbar.classList.remove('nb-scrolled');
+            banner && banner.classList.remove('nb-hidden');
         }
-    });
-
-
-
-
-    // Close navbar-collapse when a clicked
-    $(".navbar-nav .dropdown-item a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
-
-
-
-
-    // Close mobile menu "on click"
-    $(function () {
-        var navMain = $(".scroll-init");
-        navMain.on("click", "a", null, function () {
-            navMain.collapse('hide');
-        });
-    });
-
-
-
-
-
-
-
-    // Sections background image from data background
-    var pageSection = $(".bg-img, section");
-    pageSection.each(function (indx) {
-        if ($(this).attr("data-background")) {
-            $(this).css("background-image", "url(" + $(this).data("background") + ")");
-        }
-    });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Accordion SECTION
-
-    const faqs = document.querySelectorAll(".faq-item");
-
-    faqs.forEach((faq) => {
-        faq.querySelector(".faq-question").addEventListener("click", () => {
-            faqs.forEach((item) => {
-                if (item !== faq) item.classList.remove("active");
-            });
-            faq.classList.toggle("active");
-        });
-    });
-    // Accordion SECTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // GALLERY PAGE SECTION
-
-
-
-    // GALLERY PAGE SECTION
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Animations
-    var contentWayPoint = function () {
-        var i = 0;
-        $('.animate-box').waypoint(function (direction) {
-            if (direction === 'down' && !$(this.element).hasClass('animated')) {
-                i++;
-                $(this.element).addClass('item-animate');
-                setTimeout(function () {
-                    $('body .animate-box.item-animate').each(function (k) {
-                        var el = $(this);
-                        setTimeout(function () {
-                            var effect = el.data('animate-effect');
-                            if (effect === 'fadeIn') {
-                                el.addClass('fadeIn animated');
-                            } else if (effect === 'fadeInLeft') {
-                                el.addClass('fadeInLeft animated');
-                            } else if (effect === 'fadeInRight') {
-                                el.addClass('fadeInRight animated');
-                            } else {
-                                el.addClass('fadeInUp animated');
-                            }
-                            el.removeClass('item-animate');
-                        }, k * 200, 'easeInOutExpo');
-                    });
-                }, 100);
-            }
-        }, {
-            offset: '85%'
-        });
-    };
-    $(function () {
-        contentWayPoint();
-    });
-
-
-
-
-
-
-    // YouTubePopUp
-    $("a.vid").YouTubePopUp();
-
-
-
-
-
-
-
-
-    // Scroll back to top
-    var progressPath = document.querySelector('.progress-wrap path');
-    var pathLength = progressPath.getTotalLength();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    progressPath.style.strokeDashoffset = pathLength;
-    progressPath.getBoundingClientRect();
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
-        var scroll = $(window).scrollTop();
-        var height = $(document).height() - $(window).height();
-        var progress = pathLength - (scroll * pathLength / height);
-        progressPath.style.strokeDashoffset = progress;
+    }, { passive: true });
+
+    /* ── Open sidebar ── */
+    function openSidebar() {
+        sidebar.classList.add('nb-open');
+        sidebar.setAttribute('aria-hidden', 'false');
+        hamburger.classList.add('nb-open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
     }
-    updateProgress();
-    $(window).scroll(updateProgress);
-    var offset = 150;
-    var duration = 550;
-    jQuery(window).on('scroll', function () {
-        if (jQuery(this).scrollTop() > offset) {
-            jQuery('.progress-wrap').addClass('active-progress');
+
+    /* ── Close sidebar ── */
+    function closeSidebar() {
+        sidebar.classList.remove('nb-open');
+        sidebar.setAttribute('aria-hidden', 'true');
+        hamburger.classList.remove('nb-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    hamburger && hamburger.addEventListener('click', openSidebar);
+    closeBtn && closeBtn.addEventListener('click', closeSidebar);
+    backdrop && backdrop.addEventListener('click', closeSidebar);
+
+    /* Close on Escape */
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeSidebar();
+    });
+
+    /* Close when a nav link is tapped */
+    sidebar && sidebar.querySelectorAll('.nb-snav a').forEach(function (a) {
+        a.addEventListener('click', closeSidebar);
+    });
+
+    /* Close when resizing back to desktop */
+    window.addEventListener('resize', function () {
+        if (window.innerWidth > 991) closeSidebar();
+    });
+
+    /* ── Services accordion (sidebar) ── */
+    sToggle && sToggle.addEventListener('click', function () {
+        var isOpen = sMenu.classList.toggle('nb-open');
+        sToggle.classList.toggle('nb-open', isOpen);
+        sToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    /* ── Mark active link by current page ── */
+    var page = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nb-links a, .nb-snav a').forEach(function (a) {
+        if (a.getAttribute('href') === page) {
+            a.classList.add('nb-active');
         } else {
-            jQuery('.progress-wrap').removeClass('active-progress');
+            a.classList.remove('nb-active');
         }
     });
-    jQuery('.progress-wrap').on('click', function (event) {
-        event.preventDefault();
-        jQuery('html, body').animate({
-            scrollTop: 0
-        }, duration);
-        return false;
-    })
 
+
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Accordion SECTION
+
+const faqs = document.querySelectorAll(".faq-item");
+
+faqs.forEach((faq) => {
+    faq.querySelector(".faq-question").addEventListener("click", () => {
+        faqs.forEach((item) => {
+            if (item !== faq) item.classList.remove("active");
+        });
+        faq.classList.toggle("active");
+    });
 });
+// Accordion SECTION
+
+
+
+
+
+
+
+
 
 
 
@@ -367,11 +255,6 @@ class HeroCarousel {
         }
     }
 }
-
-
-
-
-
 
 
 // Initialize carousel
